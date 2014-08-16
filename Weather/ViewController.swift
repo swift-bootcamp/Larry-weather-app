@@ -14,7 +14,7 @@ class ViewController: UIViewController, NSURLConnectionDelegate {
     @IBOutlet var city: UILabel!
     @IBOutlet weak var icon: UIImageView!
     var data:NSMutableData = NSMutableData()
-    
+    @IBOutlet weak var temp: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,14 +43,23 @@ class ViewController: UIViewController, NSURLConnectionDelegate {
     func connection(connection: NSURLConnection!, didReceiveData dataReceived:NSData!){
             println("downloading")
             self.data.appendData(dataReceived)
-        
-        var json = NSString(data:data, encoding:NSUTF8StringEncoding)
-        println(json)
     }
 
     
     func connectionDidFinishLoading(connection:NSURLConnection!){
         println("download finish")
+        
+        var json = NSString(data:data, encoding:NSUTF8StringEncoding)
+        println(json)
+        
+        var error:NSError?
+        let jsonDictionary = NSJSONSerialization.JSONObjectWithData(self.data, options: NSJSONReadingOptions.MutableContainers, error: &error) as NSDictionary
+        let temp: AnyObject? = jsonDictionary["main"]?["temp"]
+        
+        let weatherTempCelsius = Int(round((temp!.floatValue - 273.15)))
+        let weatherTempFahrenheit = Int(round(((temp!.floatValue - 273.15)*1.8)+32))
+        
+        self.temp.text = "\(weatherTempCelsius)°C"
     }
 
 }
