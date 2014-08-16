@@ -11,12 +11,17 @@ import UIKit
 class ViewController: UIViewController {
     
     var api: String = ""
-    @IBOutlet weak var city: UILabel!
+    var url: String="http://opendata.cwb.gov.tw/opendata/DIV2/O-A0001-001.xml"
+    @IBOutlet var city: UILabel!
+    @IBOutlet weak var icon: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.city.text = "Taipei"
+        icon.image = UIImage(named: "rain.png")
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
