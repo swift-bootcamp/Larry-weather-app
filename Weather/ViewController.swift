@@ -8,29 +8,48 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, NSURLConnectionDelegate {
     
-    var api: String = ""
-    var url: String="http://opendata.cwb.gov.tw/opendata/DIV2/O-A0001-001.xml"
+    
     @IBOutlet var city: UILabel!
     @IBOutlet weak var icon: UIImageView!
-    let background = UIImage(named: "2011042154565430.jpg")
+    var data:NSMutableData = NSMutableData()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let background = UIImage(named: "2011042154565430.jpg")
         self.view.backgroundColor = UIColor(patternImage: background)
         self.city.text = "Taipei"
         icon.image = UIImage(named: "rain.png")
-        //icon.frameForAlignmentRect(CGRect(100,100,100,100))
         
+        startConnect()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func startConnect(){
+        var restAPI: String = "http://api.openweathermap.org/data/2.5/weather?q=Taipei"
+        var url:NSURL = NSURL(string: restAPI);
+        var request:NSURLRequest = NSURLRequest(URL:url)
+        var connection:NSURLConnection = NSURLConnection(request: request, delegate: self, startImmediately: true)
+        println("start download")
+    }
+    
+    func connection(connection: NSURLConnection!, didReceiveData dataReceived:NSData!){
+            println("downloading")
+            //println(dataReceived)
+            self.data.appendData(dataReceived)
+    }
 
+    
+    func connectionDidFinishLoading(connection:NSURLConnection!){
+        println("download finish")
+    }
 
 }
 
