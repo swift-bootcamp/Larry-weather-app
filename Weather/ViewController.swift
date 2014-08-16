@@ -42,8 +42,10 @@ class ViewController: UIViewController, NSURLConnectionDelegate {
     
     func connection(connection: NSURLConnection!, didReceiveData dataReceived:NSData!){
             println("downloading")
-            //println(dataReceived)
             self.data.appendData(dataReceived)
+        
+        var json = NSString(data:data, encoding:NSUTF8StringEncoding)
+        println(json)
     }
 
     
