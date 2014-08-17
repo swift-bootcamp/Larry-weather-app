@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		95207E0A19A0463D00024C95 /* welecome.png in Resources */ = {isa = PBXBuildFile; fileRef = 95207E0919A0463D00024C95 /* welecome.png */; };
+		95207E0C19A05DED00024C95 /* 803.png in Resources */ = {isa = PBXBuildFile; fileRef = 95207E0B19A05DED00024C95 /* 803.png */; };
+		95207E0E19A07D2600024C95 /* cloud.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 95207E0D19A07D2600024C95 /* cloud.jpg */; };
+		95207E3E19A081BC00024C95 /* cloud2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 95207E3D19A081BC00024C95 /* cloud2.jpg */; };
+		95207E4019A0827300024C95 /* Weather-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 95207E3F19A0827300024C95 /* Weather-icon.png */; };
+		95207E4219A09B3600024C95 /* rainRate.png in Resources */ = {isa = PBXBuildFile; fileRef = 95207E4119A09B3600024C95 /* rainRate.png */; };
+		95207E4419A0A03600024C95 /* Humidity.png in Resources */ = {isa = PBXBuildFile; fileRef = 95207E4319A0A03600024C95 /* Humidity.png */; };
 		957F405D199F245200A9C802 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957F405C199F245200A9C802 /* AppDelegate.swift */; };
 		957F4060199F245200A9C802 /* Weather.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 957F405E199F245200A9C802 /* Weather.xcdatamodeld */; };
 		957F4062199F245200A9C802 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957F4061199F245200A9C802 /* ViewController.swift */; };
@@ -28,6 +35,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		95207E0919A0463D00024C95 /* welecome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = welecome.png; sourceTree = "<group>"; };
+		95207E0B19A05DED00024C95 /* 803.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 803.png; sourceTree = "<group>"; };
+		95207E0D19A07D2600024C95 /* cloud.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cloud.jpg; sourceTree = "<group>"; };
+		95207E3D19A081BC00024C95 /* cloud2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cloud2.jpg; sourceTree = "<group>"; };
+		95207E3F19A0827300024C95 /* Weather-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Weather-icon.png"; sourceTree = "<group>"; };
+		95207E4119A09B3600024C95 /* rainRate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rainRate.png; sourceTree = "<group>"; };
+		95207E4319A0A03600024C95 /* Humidity.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Humidity.png; sourceTree = "<group>"; };
 		957F4057199F245100A9C802 /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		957F405B199F245200A9C802 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		957F405C199F245200A9C802 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +95,13 @@
 		957F4059199F245100A9C802 /* Weather */ = {
 			isa = PBXGroup;
 			children = (
+				95207E3F19A0827300024C95 /* Weather-icon.png */,
+				95207E4319A0A03600024C95 /* Humidity.png */,
+				95207E3D19A081BC00024C95 /* cloud2.jpg */,
+				95207E0D19A07D2600024C95 /* cloud.jpg */,
+				95207E0B19A05DED00024C95 /* 803.png */,
+				95207E0919A0463D00024C95 /* welecome.png */,
+				95207E4119A09B3600024C95 /* rainRate.png */,
 				957F407E199F332A00A9C802 /* 2011042154565430.jpg */,
 				957F407C199F300400A9C802 /* rain.png */,
 				957F405C199F245200A9C802 /* AppDelegate.swift */,
@@ -199,8 +220,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				957F4065199F245200A9C802 /* Main.storyboard in Resources */,
+				95207E4019A0827300024C95 /* Weather-icon.png in Resources */,
 				957F4067199F245300A9C802 /* Images.xcassets in Resources */,
+				95207E3E19A081BC00024C95 /* cloud2.jpg in Resources */,
+				95207E0E19A07D2600024C95 /* cloud.jpg in Resources */,
+				95207E4419A0A03600024C95 /* Humidity.png in Resources */,
+				95207E4219A09B3600024C95 /* rainRate.png in Resources */,
 				957F407F199F332A00A9C802 /* 2011042154565430.jpg in Resources */,
+				95207E0C19A05DED00024C95 /* 803.png in Resources */,
+				95207E0A19A0463D00024C95 /* welecome.png in Resources */,
 				957F407D199F300400A9C802 /* rain.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,6 +437,7 @@
 				957F4078199F245300A9C802 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		957F4079199F245300A9C802 /* Build configuration list for PBXNativeTarget "WeatherTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +446,7 @@
 				957F407B199F245300A9C802 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
